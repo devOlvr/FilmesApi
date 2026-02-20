@@ -15,6 +15,10 @@ namespace FilmesApi.Data.Dtos
         [Range(70, 600, ErrorMessage = "A duração deve estar entre 70 e 600 minutos.")]
         public int Duracao { get; set; }
 
+        public DateTime HoraDaConsula { get; set; } = DateTime.Now;
+
+        public ICollection<ReadSessaoDto> Sessoes { get; set; }
+
     }
 }
 
