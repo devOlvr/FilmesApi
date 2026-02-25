@@ -1,4 +1,5 @@
 ﻿using FilmesApi.Models;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace FilmesApi.Data
@@ -11,9 +12,9 @@ namespace FilmesApi.Data
 
         }
 
-        public DbSet<Filme> Filmes { get; set; }
-        public DbSet<Cinema> Cinemas { get; set; }
-        public DbSet<Endereco> Enderecos { get; set; }
-        public DbSet<Sessao> Sessoes { get; set; }
+        public DbSet<Filme>? Filmes { get; set; }
+        public DbSet<Cinema>? Cinemas { get; set; }
+        public DbSet<Endereco>? Enderecos { get; set; }
+        public DbSet<Sessao>? Sessoes { get; set; }
     } 
 }

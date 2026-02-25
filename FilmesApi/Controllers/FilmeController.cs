@@ -12,8 +12,8 @@ namespace FilmesApi.Controllers;
 public class FilmeController : ControllerBase
 {
 
-    private FilmeContext _context;
-    private IMapper _mapper;
+    private readonly FilmeContext _context;
+    private readonly IMapper _mapper;
 
     public FilmeController(FilmeContext context, IMapper mapper)
     {

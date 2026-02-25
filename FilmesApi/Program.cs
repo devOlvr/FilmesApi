@@ -3,10 +3,10 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-var connectionString = builder.Configuration.GetConnectionString("FilmeConnection");
+// var connectionString = builder.Configuration.GetConnectionString("FilmeConnection")
 
 builder.Services.AddDbContext<FilmeContext>(opts =>
-    opts.UseLazyLoadingProxies().UseMySql(connectionString, ServerVersion.AutoDetect(connectionString))
+    opts.UseLazyLoadingProxies().UseSqlite("Data Source=filmes.db")
 );
 
 
